@@ -2,13 +2,19 @@
 
 A deep learning-based semantic segmentation project that detects landslide-affected regions from multispectral satellite imagery using a U-Net architecture.
 
-## Overview
+## 🔗 Project Notebook
+
+**Kaggle Notebook:** [Landslide Detection Using Deep Learning](https://www.kaggle.com/code/satyearth/landslide-detection-using-dl)
+
+The complete implementation, model training, and evaluation are available in the Kaggle Notebook.
+
+## 📌 Overview
 
 Landslides can cause significant damage to infrastructure, ecosystems, and human settlements. This project explores the use of deep learning and satellite imagery to identify landslide-affected areas through pixel-level image segmentation.
 
-The model takes multispectral satellite images as input and predicts a binary segmentation mask highlighting landslide regions.
+The model takes multispectral satellite images as input and predicts a binary segmentation mask highlighting landslide-affected regions.
 
-## Project Highlights
+## ✨ Project Highlights
 
 - Uses multispectral satellite imagery with 14 input channels.
 - Processes images at a resolution of 128 × 128 pixels.
@@ -17,7 +23,7 @@ The model takes multispectral satellite images as input and predicts a binary se
 - Trained using the Adam optimizer.
 - Training configured for 30 epochs.
 
-## Dataset
+## 📂 Dataset
 
 | Dataset | Number of Samples |
 |---|---:|
@@ -25,22 +31,34 @@ The model takes multispectral satellite images as input and predicts a binary se
 | Validation images | 245 |
 | Test images | 800 |
 
-**Input shape:** `128 × 128 × 14`
+**Input Shape:** `128 × 128 × 14`
 
 The training dataset contains corresponding segmentation masks. The test dataset does not contain ground-truth labels, so test predictions are not independently verified.
 
-## Model Architecture
+## 🧠 Model Architecture
 
-**U-Net**
+### U-Net
 
-U-Net is a convolutional neural network commonly used for biomedical and satellite image segmentation. Its encoder-decoder structure and skip connections help capture both contextual and spatial information.
+U-Net is a convolutional neural network commonly used for biomedical and satellite image segmentation.
+
+Its encoder-decoder structure and skip connections help capture both contextual and spatial information.
 
 The model performs binary pixel-wise segmentation:
 
 - Landslide-affected region
 - Non-landslide region
 
-## Technologies Used
+## ⚙️ Techniques Used
+
+- Semantic Segmentation
+- U-Net Architecture
+- Multispectral Image Processing
+- Binary Cross-Entropy Loss
+- Dice Loss
+- Adam Optimization
+- Pixel-wise Binary Classification
+
+## 🛠️ Technologies Used
 
 - Python
 - PyTorch
@@ -49,8 +67,9 @@ The model performs binary pixel-wise segmentation:
 - Matplotlib
 - h5py
 - Scikit-learn
+- Kaggle Notebooks
 
-## Evaluation Results
+## 📊 Evaluation Results
 
 The following results were obtained on the validation dataset:
 
@@ -63,7 +82,7 @@ The following results were obtained on the validation dataset:
 
 These metrics represent validation performance, not verified test-set performance.
 
-## Project Workflow
+## 🔄 Project Workflow
 
 1. Load multispectral satellite imagery.
 2. Preprocess images and segmentation masks.
@@ -72,46 +91,38 @@ These metrics represent validation performance, not verified test-set performanc
 5. Evaluate predictions using Dice Score, IoU, Precision, and Recall.
 6. Generate landslide segmentation predictions.
 
-## Installation
+## 🚀 How to Run
 
-Clone the repository:
+This project is implemented using Kaggle Notebooks, so no local installation is required.
 
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-cd YOUR-REPOSITORY
-```
+1. Open the [Kaggle Project Notebook](https://www.kaggle.com/code/satyearth/landslide-detection-using-dl).
+2. Sign in to your Kaggle account.
+3. Click **Copy & Edit** to create your own editable version.
+4. Ensure the required dataset is attached to the notebook.
+5. Run the notebook cells sequentially.
+6. Train the U-Net model and evaluate its validation performance.
 
-Install the required libraries:
-
-```bash
-pip install torch numpy pandas matplotlib h5py scikit-learn
-```
-
-## How to Run
-
-1. Open the Jupyter Notebook included in this repository.
-2. Configure the dataset paths according to your local environment.
-3. Run the notebook cells in sequence.
-4. Train the model and evaluate its validation performance.
-
-## Applications
+## 🌍 Applications
 
 - Landslide-affected area identification
 - Satellite image analysis
 - Disaster management research
-- Remote sensing and environmental monitoring
+- Remote sensing
+- Environmental monitoring
 
-## Future Improvements
+## 🔮 Future Improvements
 
 - Improve segmentation accuracy with additional training data.
 - Experiment with advanced segmentation architectures.
 - Evaluate performance on independently labeled test imagery.
 - Explore deployment for large-scale satellite image analysis.
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 This project is developed for educational and research purposes. Predictions should not be treated as a substitute for professional geological assessment or official disaster-management decisions.
 
-## Author
+## 👨‍💻 Author
 
 **Satya**
+
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue?logo=kaggle)](https://www.kaggle.com/code/satyearth/landslide-detection-using-dl)
